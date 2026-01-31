@@ -4,7 +4,7 @@ const buttonElement = document.querySelector('button') as HTMLButtonElement;
 
 function add(a: number, b: number) {
   return a + b;
-}
+} 
 // concersions: .toString, .parseInt
 // void means: doesnt have a return statement
 
