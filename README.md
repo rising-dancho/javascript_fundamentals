@@ -1,1 +1,1 @@
-# job_hunt
+# javascript_fundamentals
