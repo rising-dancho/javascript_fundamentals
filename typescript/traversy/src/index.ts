@@ -50,18 +50,30 @@ let state: State = 'idle';
 
 // x = employee;
 
-// OBJECTS
+// OBJECTS TYPE
 type User = {
   id: number;
   name: string;
+  email?: string; // optional
 };
+
+// primitive aliases
+type Name = string;
 
 const user: User = {
   id: 1,
   name: 'John',
 };
 
-x = user.name;
+// Union types
+type Status = 'idle' | 'loading' | 'success' | 'error';
+type ID = number | string;
+
+let status: Status;
+status = 'loading'; // ✅
+// status = 'done'; // ❌ TypeScript error
+
+x = status;
 
 // TYPE ASSERTION
 let cid: any = 1;
@@ -76,7 +88,35 @@ let customerId = cid as number;
 // };
 
 // TYPES IN FUNCTIONS
+function addNumbers(x: number, y: number): number {
+  return x + y;
+}
 
+x = addNumbers(1, 2);
+
+// VOID : this funtion doesnt return anything. (parameters using union)
+function message(message: string | number): void {
+  console.log(message);
+}
+
+x = message('hello');
+
+// OBJECTS
+// type User = {
+//   id: number;
+//   name: string;
+// };
+
+// INTERFACES : only use interfaces when necessary .. type is the one prefered 90% of the time
+interface UserInterface {
+  id: number;
+  name: string;
+}
+
+const user1: UserInterface = {
+  id: 1,
+  name: 'react',
+};
 
 console.log('output: ', x);
 
