@@ -24,8 +24,64 @@ employee = [
 ];
 
 // UNION - make a variable hold more than 1 type
+let pid: string | number;
+pid = '';
 
+// ENUMS: enumerated type. allows us to define a set of named constants
+enum Diretion1 {
+  FOWARD = 1,
+  BACKWARD,
+  LEFT,
+  RIGHT,
+}
 
-x = employee;
+enum Direction2 {
+  force = 'good',
+  darkside = 'evil',
+}
+
+// x = Diretion1.FOWARD;
+x = Direction2.force;
+
+// TYPE : more modern but does the same thing as enums
+type State = 'idle' | 'loading' | 'success' | 'error';
+
+let state: State = 'idle';
+
+// x = employee;
+
+// OBJECTS
+type User = {
+  id: number;
+  name: string;
+};
+
+const user: User = {
+  id: 1,
+  name: 'John',
+};
+
+x = user.name;
+
+// TYPE ASSERTION
+let cid: any = 1;
+// let customerId = <number>cid;
+let customerId = cid as number;
+
+// customerId = true
+
+// const user: { id: number; name: string } = {
+//   id: 1,
+//   name: 'John',
+// };
+
+// TYPES IN FUNCTIONS
+
 
 console.log('output: ', x);
+
+// TYPESCRIPT NAMING CONVENTION
+// type User = { id: number };
+// interface Product { name: string }
+// enum Status { Active, Disabled }
+// class Account {}
