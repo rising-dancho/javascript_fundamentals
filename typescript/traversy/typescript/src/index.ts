@@ -13,7 +13,7 @@ let arr: any = [true, 'string', 1];
 
 // TUPLE
 let person: [number, string, boolean];
-person = [1, 'sex', true];
+person = [1, 'sex', true]
 
 // AN ARRAY OF TUPLES
 let employee: [number, string][];
