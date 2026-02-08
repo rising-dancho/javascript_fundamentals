@@ -11,6 +11,7 @@ Player.prototype.gainXp = function (num) {
       this.lvl += 1;
       this.points -= 10;
     }
+    console.log(this.describe())
   }
 };
 
@@ -24,4 +25,4 @@ const p1 = new Player('Ben');
 p1.gainXp(10);
 p1.gainXp(8);
 p1.gainXp(10);
-console.log(p1.describe());
+// console.log(p1.describe());
