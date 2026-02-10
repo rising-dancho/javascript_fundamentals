@@ -5,7 +5,7 @@ class Person {
     this._lastName = lastName;
   }
 
-  // GETTERS AND SETTERS LIVE IN THE PROTOTYPE and NOT in the constructor instance
+  // GETTERS AND SETTERS gets assigned IN THE PROTOTYPE and NOT in the constructor instance because they are NOT constructor properties!!
   // GET: getter is just a method.. declared like a method but used like a property
   get firstName() {
     return this.capitalizeInitial(this._firstName);
@@ -46,7 +46,6 @@ console.log(person1.lastName);
 
 console.log(person1.fullName); // getters arent called like a function. its called like a property
 
-
 // So when JS sees:
 
 // this.firstName
@@ -59,14 +58,12 @@ console.log(person1.fullName); // getters arent called like a function. its call
 
 // https://chatgpt.com/share/698a49db-6434-8000-81e5-dec39652665f
 
-
 // =======================================================
 
 // 5️⃣ What this.firstName REALLY means
 
 // This line:
 // this.firstName
-
 
 // does NOT mean:
 // “use the constructor parameter named firstName”
